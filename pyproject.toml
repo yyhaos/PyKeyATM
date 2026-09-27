@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "pybind11>=2.11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pykeyatm"
+version = "0.1.0"
+description = "Python and C++ implementation of keyword-assisted topic models"
+readme = "README.md"
+license = {text = "GPL-3.0-only"}
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "scipy>=1.9",
+  "patsy>=0.5",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.6", "seaborn>=0.12"]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

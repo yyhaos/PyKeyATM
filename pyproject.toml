@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pykeyatm"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python and C++ implementation of keyword-assisted topic models"
 readme = "README.md"
-license = {text = "GPL-3.0-only"}
+license = {file = "LICENSE"}
 requires-python = ">=3.9"
 dependencies = [
   "numpy>=1.23",
@@ -30,3 +30,5 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+

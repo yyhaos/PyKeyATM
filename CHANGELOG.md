@@ -1,5 +1,10 @@
 ﻿# Changelog
 
+## 0.1.1
+
+- Expanded the runnable examples to report fitted topic proportions, topic-word probabilities, top words, and sampling diagnostics.
+- Updated the package metadata to use the current license-file format.
+
 ## 0.1.0
 
 Initial package version. The package audit adds:

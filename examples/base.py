@@ -2,6 +2,7 @@
 import pandas as pd
 
 from pykeyatm import keyATM, keyATM_read
+from _summary import print_fit_summary
 
 
 dtm = pd.DataFrame(
@@ -14,4 +15,6 @@ fit = keyATM(
     keywords={"policy": ["policy"], "health": ["health"]},
     options={"seed": 42, "iterations": 20, "verbose": False, "use_cache": False},
 )
-print(fit["theta"])
+print_fit_summary(fit)
+
+

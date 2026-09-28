@@ -2,6 +2,7 @@
 import pandas as pd
 
 from pykeyatm import keyATM_read, weightedLDA
+from _summary import print_fit_summary
 
 
 dtm = pd.DataFrame(
@@ -15,4 +16,6 @@ fit = weightedLDA(
     number_of_topics=3,
     options={"seed": 42, "iterations": 20, "verbose": False, "use_cache": False},
 )
-print(fit["theta"])
+print_fit_summary(fit)
+
+

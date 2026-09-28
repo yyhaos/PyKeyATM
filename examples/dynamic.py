@@ -2,6 +2,7 @@
 import pandas as pd
 
 from pykeyatm import keyATM, keyATM_read
+from _summary import print_fit_summary
 
 
 dtm = pd.DataFrame(
@@ -15,4 +16,6 @@ fit = keyATM(
     model_settings={"num_states": 2, "time_index": [1, 1, 2, 2]},
     options={"seed": 42, "iterations": 20, "verbose": False, "use_cache": False},
 )
-print(fit["theta"])
+print_fit_summary(fit)
+
+
